@@ -1,0 +1,13 @@
+\section{Dealing with angles}
+
+Angles constitute a special type of numbers as they are only defined modulo $2\pi$. From a computation point of view, it can create singularities or ambiguities. Stricly speaking, angles can be seen as an equivalence class for the relation \textquotedblleft have a difference multiple of $2\pi$\textquotedblright:
+$$ a \sim b \text{ if } \exists p \in \mathbb{Z}, a-b = 2 p \pi $$
+which is inconvenient to implement in practice. In order to illustrate this problem, 
+
+There exist a few tricks to overcome this issue:
+\begin{itemize}
+ \item Forcing all angles to be in $[0, 2 \pi]$
+ \item Replacing each angle $\theta$ with $\arctan(2\theta)$
+ \item Replacing each angle $\theta$ with a pair $(\cos\theta, \sin\theta)$
+\end{itemize}
+For dynamic systems, however, the two first two solutions create a discontinuity between, for instance, $0.001$ and $2\pi-0.001$ which can affect the stability of the computation. The third one performs well in terms of smoothness but will double the number of dimensions required to code an angle which is catastrophic given the curse of dimensionality. In this paper, we will use an improved version of the third solution

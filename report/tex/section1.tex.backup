@@ -1,0 +1,3 @@
+\section{Introduction}
+
+Optimal control of a fully or under-actuated linkage is a widely studied field. In some cases, embedding sensors on the system to be controlled may not be possible or preferred. This can be for cost reasons, beaucase the sensor will disturb the system (especially at small scale) or because we want to limit its complexity, as for a surgical robot that require drastic certifications for any part going inside the human body. 

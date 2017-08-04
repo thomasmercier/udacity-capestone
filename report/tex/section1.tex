@@ -1,0 +1,11 @@
+\section{Introduction}
+
+\subsection{Motivation}
+
+Optimal control of a fully or under-actuated linkage is a widely studied field. In some cases, embedding sensors on the system to be controlled may not be possible or preferred. This can be for cost reasons, beaucase the sensor will disturb the system (especially at small scale) or because we want to limit its complexity, as for a surgical robot that require drastic certifications for any part going inside the human body.
+
+Commercial vision systems are becoming cheaper, more precise and constitute a versatile measurement solution. They can work from micrometer to light-year scale depending on the optics associated and their time scale can vary from a few milliseconds to several months. The large amount of data generated make machine learning techniques natural candidates for post-processing.
+
+\subsection{Approach}
+
+The dimentionality of a movie can easily exceed $10^6$ (the number of pixels) which makes any direct computation completely intractable. However, the movie of a robot only covers a manifold of dimention the number of degrees of freedom of the robot, which is typically much less (from 1 to 20). In this paper, we will take advantage of this low underlaying dimentionality to train a feedback controller to perform certain tasks. The system considered are a simple pendulum and an underactuated double pendulum (\textquotedblleft acrobot\textquotedblright).
